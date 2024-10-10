@@ -1,0 +1,20 @@
+list of 10 html tags used:
+<img>
+<header>
+<main>
+<div>
+<h1>
+<p>
+<ul>
+<li>
+<a>
+<h6>
+
+list of 5 css properties used:
+background-color
+height
+width
+font-size
+margin
+
+I used javascript for menu button. Bootstrap really has some cool components.
