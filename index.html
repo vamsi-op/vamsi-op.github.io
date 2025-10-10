@@ -46,7 +46,7 @@
                         Hi, I'm <span class="gradient-text">Vamsi Puttepu</span>
                     </h1>
                     <p class="hero-subtitle">
-                        Computer Science Student | Full Stack Developer | Cloud & ML Enthusiast
+                        B.Tech CSE (AI & ML) Student | Full Stack Developer | Cloud & AI Enthusiast
                     </p>
                     <p class="hero-description">
                         Passionate computer science student specializing in full stack development, cloud operations, and machine learning. 
@@ -55,6 +55,9 @@
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">
                             <i class="fas fa-code"></i> View Projects
+                        </a>
+                        <a href="resume.html" class="btn btn-secondary" target="_blank">
+                            <i class="fas fa-file-alt"></i> View Resume
                         </a>
                         <a href="#contact" class="btn btn-secondary">
                             <i class="fas fa-envelope"></i> Get In Touch
@@ -78,15 +81,19 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
+            <h4 class="section-title" style="font-size: 2rem">A little bit</h4>
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text glass-card">
                     <h3>Computer Science Student & Tech Enthusiast</h3>
                     <p>
-                        I'm a passionate computer science student with a strong foundation in full stack development, 
-                        cloud technologies, and machine learning. Currently pursuing my degree while actively building 
-                        projects that demonstrate my skills in modern web technologies and cloud platforms.
+                        I'm a passionate computer science student with a strong foundation in full stack development, cloud technologies,
+                         and machine learning. Currently pursuing my degree while actively building projects that demonstrate my skills
+                         in modern web technologies and cloud platforms.
                     </p>
+                    <p> My hometown is Visakhapatnam, where the sea breeze fuels 
+                        my inspiration. When I’m not immersed in code, you’ll find me on the football field, strategizing my next move. Video games provide an escape, and chess sharpens my mind.
+                        Music? It’s my soul’s language. Oh, and I dabble in editing too—because life’s a canvas waiting to be transformed!</p>
                     <p>
                         I love exploring new technologies, contributing to open source projects, and participating in 
                         hackathons. My goal is to become a well-rounded software engineer who can bridge the gap 
@@ -98,11 +105,11 @@
                             <p>Projects Built</p>
                         </div>
                         <div class="stat">
-                            <h4>3+</h4>
-                            <p>Years Learning</p>
+                            <h4>5+</h4>
+                            <p>Certifications</p>
                         </div>
                         <div class="stat">
-                            <h4>10+</h4>
+                            <h4>30+</h4>
                             <p>Technologies Mastered</p>
                         </div>
                     </div>
@@ -135,10 +142,11 @@
                         <span class="skill-tag">GCP</span>
                         <span class="skill-tag">Docker</span>
                         <span class="skill-tag">Vertex AI</span>
-                        <span class="skill-tag">Looker</span>
+                        <span class="skill-tag">Looker Studio</span>
                         <span class="skill-tag">Kubernetes</span>
                         <span class="skill-tag">Terraform</span>
                         <span class="skill-tag">Monitoring</span>
+                        <span class="skill-tag">CI/CD</span>
                     </div>
                 </div>
                 <div class="skill-category glass-card">
@@ -163,25 +171,46 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
+
                 <div class="project-card glass-card">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <i class="fas fa-laptop-code"></i>
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>InfiGrow - College Placement Platform</h3>
+                        <p>A comprehensive Firebase-based platform designed to boost college placements at ANITS by providing learners with resources, mentorship, and placement preparation tools in one centralized location.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Firestore</span>
+                        </div>
+                        <div class="project-links">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Personal Portfolio Website</h3>
-                        <p>A modern, responsive portfolio website built with HTML, CSS, and JavaScript featuring glass morphism design and smooth animations.</p>
+                        <h3>Suraksha - Smart India Hackathon 2025</h3>
+                        <p>Proactive personal safety solution addressing growing concerns in urban and unfamiliar areas. Built for SIH 2025 problem statement focusing on preventive safety measures rather than reactive responses.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Responsive</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Typescript</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="#" class="project-link">
+                            <a href="https://github.com/vamsi-op/Suraksha" class="project-link">
                                 <i class="fab fa-github"></i> Source Code
                             </a>
                         </div>
@@ -191,20 +220,21 @@
                 <div class="project-card glass-card">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <i class="fas fa-cogs"></i>
+                            <i class="fas fa-cloud-sun-rain"></i>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Coming Soon - Exciting Projects</h3>
-                        <p>Currently working on several innovative projects involving full stack development, cloud deployment, and machine learning applications. Stay tuned for updates!</p>
+                        <h3>Weather Dashboard - CS50X Final Project</h3>
+                        <p>An interactive weather dashboard built with Flask that displays real-time weather information using OpenWeather API integration with responsive UI design.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Flask</span>
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">HTML/CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="#contact" class="project-link">
-                                <i class="fas fa-envelope"></i> Get Updates
+                            <a href="https://vamsiop.pythonanywhere.com" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
                     </div>
@@ -213,23 +243,189 @@
                 <div class="project-card glass-card">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <i class="fas fa-graduation-cap"></i>
+                            <i class="fas fa-brain"></i>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Academic Projects</h3>
-                        <p>Various academic projects demonstrating proficiency in algorithms, data structures, web development, and machine learning concepts.</p>
+                        <h3>Nutrition Agent</h3>
+                        <p>An intelligent nutrition assistant built with IBM Watsonx AI as part of IBM AI and Cloud Internship from Edunet. Provides personalized dietary recommendations and nutritional insights.</p>
                         <div class="project-tech">
+                            <span class="tech-tag">IBM Watsonx</span>
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">Javascript</span>
+                            <span class="tech-tag">IBM Cloud</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
+                            <a href="https://nutrition-wiz.vercel.app/" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
                     </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Interactive Recipe Finder</h3>
+                        <p>A dynamic recipe discovery platform developed as part of IBM Front End Developer Internship from Edunet. Helps find the recipe bases on the ingredients you have.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://get-your-recipe.vercel.app/" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/vamsi-op/recipe-finder" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>KNN Simulator with LIME - Hackathon 3rd Place</h3>
+                        <p>K-Nearest Neighbors simulator for Iris dataset with LIME (Local Interpretable Model-agnostic Explanations) built for GenAI Workshop hackathon. Secured 3rd place with explainable AI implementation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Javascript</span>
+                            <span class="tech-tag">LIME</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://knn-iris-lime.vercel.app/" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/vamsi-op/knn-iris-lime" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="leadership">
+        <div class="container">
+            <h2 class="section-title">Leadership Experience</h2>
+            <div class="leadership-grid">
+                <div class="leadership-card glass-card">
+                    <div class="leadership-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>School Captain</h3>
+                    <p class="leadership-year">Grade 10</p>
+                    <p>Led the entire student body, organized school events, coordinated with administration, and represented the school in various inter-school competitions and meetings.</p>
+                </div>
+                <div class="leadership-card glass-card">
+                    <div class="leadership-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Vice Captain</h3>
+                    <p class="leadership-year">Grade 9</p>
+                    <p>Assisted in managing student activities, organized cultural and sports events, and worked closely with the captain to maintain school discipline and student welfare.</p>
+                </div>
+                <div class="leadership-card glass-card">
+                    <div class="leadership-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>CodeClash Organizer</h3>
+                    <p class="leadership-year">College Event</p>
+                    <p>Organized and successfully conducted "CodeClash", a competitive coding event at college level, setting up platform and challenges, managing participants, and ensuring smooth execution of the competition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card glass-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Google Arcade Legend X 2</h3>
+                    <p>Achieved <strong>Legend milestone</strong> in both Google Cloud Arcade Cohorts of 2025</p>
+                </div>
+                <div class="achievement-card glass-card">
+                    <i class="fas fa-code"></i>
+                    <h3>400+ Leetcode Problem solver</h3>
+                    <p>Solved <strong>400+ problems</strong> on Leetcode    </p>
+                </div>
+                <div class="achievement-card glass-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Hackathon 3rd Place</h3>
+                    <p>Achieved <strong>3rd place</strong> in hackathon organized by Revanth Technologies after GenAI Workshop</p>
+                </div>
+                <div class="achievement-card glass-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Smart India Hackathon</h3>
+                    <p>Qualified for <strong>SIH solution submission</strong> from college level competition</p>
+                </div>
+                <div class="achievement-card glass-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Coding Contests</h3>
+                    <p>Winner in multiple college-level coding competitions and hackathons</p>
+                </div>
+                <div class="achievement-card glass-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Professional Courses</h3>
+                    <p>Successfully completed multiple professional development courses from Harvard and GeeksForGeeks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card glass-card">
+                    <div class="cert-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Harvard CS50x</h3>
+                    </div>
+                    <p>Introduction to Computer Science</p>
+                    <span class="cert-issuer">Harvard University</span>
+                </div>
+                <div class="certification-card glass-card">
+                    <div class="cert-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Harvard CS50P</h3>
+                    </div>
+                    <p>Introduction to Programming with Python</p>
+                    <span class="cert-issuer">Harvard University</span>
+                </div>
+                <div class="certification-card glass-card">
+                    <div class="cert-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Harvard CS50W</h3>
+                    </div>
+                    <p>Web Programming with Python and JavaScript</p>
+                    <span class="cert-issuer">Harvard University</span>
+                </div>
+                <div class="certification-card glass-card">
+                    <div class="cert-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>GFG 160 Days</h3>
+                    </div>
+                    <p>160 Days of Problem Solving</p>
+                    <span class="cert-issuer">GeeksForGeeks</span>
                 </div>
             </div>
         </div>
@@ -295,8 +491,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2023 Vamsi Puttepu. All rights reserved.</p>
-                <p>Built with ❤️</p>
+                <p>&copy; 2025 Vamsi Puttepu. All rights reserved.</p>
             </div>
         </div>
     </footer>

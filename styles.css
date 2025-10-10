@@ -502,6 +502,156 @@ body {
     transform: translateY(-2px);
 }
 
+/* Leadership Section */
+.leadership {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.leadership-card {
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.leadership-card:hover {
+    transform: translateY(-10px);
+}
+
+.leadership-icon {
+    font-size: 3rem;
+    color: #4facfe;
+    margin-bottom: 1.5rem;
+}
+
+.leadership-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.leadership-year {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.leadership-card p:last-child {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* Achievements Section */
+.achievements {
+    padding: 8rem 0;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.achievement-card {
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(79, 172, 254, 0.3);
+}
+
+.achievement-card i {
+    font-size: 2.5rem;
+    color: #4facfe;
+    margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.achievement-card p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.achievement-card strong {
+    color: #4facfe;
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.certification-card {
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(79, 172, 254, 0.3);
+}
+
+.cert-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cert-header i {
+    font-size: 2rem;
+    color: #4facfe;
+}
+
+.cert-header h3 {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.certification-card p {
+    color: #ccc;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.cert-issuer {
+    display: inline-block;
+    color: #4facfe;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    background: rgba(79, 172, 254, 0.1);
+    border-radius: 15px;
+    margin-top: 0.5rem;
+}
+
 /* Contact Section */
 .contact {
     padding: 8rem 0;

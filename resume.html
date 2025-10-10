@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamsi Puttepu - Resume</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data:; object-src 'none';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ATS-Friendly Resume Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 10px;
+            line-height: 1.3;
+            color: #000000;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .resume-container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            padding: 0.35in;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Download Button */
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+        
+        /* A4 Page Settings */
+        @page {
+            size: A4;
+            margin: 0.4in;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                padding: 0.25in;
+                max-width: 100%;
+            }
+            
+            .no-print {
+                display: none !important;
+            }
+
+            h2 {
+                margin: 6px 0 3px 0;
+            }
+
+            .section {
+                margin-bottom: 6px;
+            }
+
+            .item {
+                margin-bottom: 3px;
+            }
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 2px;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 12px;
+            font-weight: 600;
+            color: #000000;
+            margin: 8px 0 3px 0;
+            padding-bottom: 2px;
+            border-bottom: 1px solid #cccccc;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        h3 {
+            font-size: 10px;
+            font-weight: 600;
+            color: #000000;
+            margin: 3px 0 1px 0;
+        }
+        
+        h4 {
+            font-size: 9px;
+            font-weight: 500;
+            color: #333333;
+            margin: 1px 0;
+        }
+        
+        p, li {
+            font-size: 9px;
+            line-height: 1.25;
+            margin-bottom: 1px;
+        }
+        
+        /* Contact Information */
+        .contact-info {
+            text-align: center;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #cccccc;
+        }
+        
+        .contact-details {
+            font-size: 9px;
+            color: #333333;
+            margin-top: 2px;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 8px;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Education & Experience */
+        .item {
+            margin-bottom: 4px;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            font-size: 10px;
+        }
+        
+        .item-date {
+            font-size: 9px;
+            color: #666666;
+        }
+        
+        .item-subtitle {
+            font-size: 9px;
+            color: #333333;
+            margin-bottom: 2px;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .skill-list {
+            font-size: 10px;
+            line-height: 1.3;
+        }
+        
+        /* Projects */
+        .project-item {
+            margin-bottom: 6px;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            font-size: 11px;
+            margin-bottom: 1px;
+        }
+        
+        .tech-stack {
+            font-size: 9px;
+            color: #666666;
+            font-style: italic;
+            margin-bottom: 2px;
+        }
+        
+        /* Lists */
+        ul {
+            margin-left: 15px;
+            margin-bottom: 4px;
+        }
+        
+        li {
+            margin-bottom: 1px;
+        }
+        
+        /* Utilities */
+        .text-center { text-align: center; }
+        .font-bold { font-weight: 600; }
+        .text-sm { font-size: 10px; }
+        .text-xs { font-size: 9px; }
+        .mb-1 { margin-bottom: 2px; }
+        .mb-2 { margin-bottom: 4px; }
+        
+        /* Security */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .selectable {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+    </style>
+</head>
+<body>
+    <!-- Download Button -->
+    <button class="download-btn no-print" onclick="window.print()">
+        📥 Download Resume
+    </button>
+
+    <div class="resume-container">
+
+    <!-- Header -->
+    <header class="contact-info">
+        <h1 class="selectable">VAMSI PUTTEPU</h1>
+        <div class="contact-details selectable">
+            AI Engineer | Machine Learning Specialist | Web Developer
+        </div>
+        <div class="contact-details selectable">
+            Email: vamsiv980@gmail.com | Phone: +91 6301320060
+        </div>
+        <div class="contact-details selectable">
+            LinkedIn: <a href="https://linkedin.com/in/vamsi-puttepu">linkedin.com/in/vamsi-puttepu</a> | GitHub: <a href="https://github.com/vamsi-op">github.com/vamsi-op</a> 
+        </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <p class="selectable">
+            Motivated Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at ANITS. Passionate about full stack development, cloud operations, and machine learning with hands-on experience through internships at IBM SkillsBuild (Edunet Foundation). Proven track record in competitive programming, hackathons, and leadership roles. Proficient in Python, Django, Flask, and modern web technologies with strong foundation in data structures and algorithms.
+        </p>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+        <h2>EDUCATION</h2>
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title selectable">Bachelor of Technology - Computer Science Engineering (AI & ML)</div>
+                <div class="item-date selectable">2023 - 2027</div>
+            </div>
+            <div class="item-subtitle selectable">Anil Neerukonda Institute of Technology and Sciences (ANITS) | Visakhapatnam, India</div>
+            <p class="selectable">CGPA: 8.5/10 | Expected Graduation: 2027</p>
+        </div>
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title selectable">Intermediate (MPC)</div>
+                <div class="item-date selectable">2021 - 2023</div>
+            </div>
+            <div class="item-subtitle selectable">Sri Chaitanya Junior College of Education</div>
+            <div class="item-date selectable">Percentage: 96%</div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+        <h2>EXPERIENCE</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title selectable">AI & Cloud Intern</div>
+                <div class="item-date selectable">Jun 2025 - Jul 2025</div>
+            </div>
+            <div class="item-subtitle selectable">Edunet Foundation (IBM SkillsBuild Program) | Remote</div>
+            <ul>
+                <li class="selectable">Completed intensive virtual internship focusing on AI and cloud computing technologies</li>
+                <li class="selectable">Developed Nutrition Agent using IBM Watsonx AI for personalized dietary recommendations</li>
+                <li class="selectable">Gained hands-on experience with IBM Watson, cloud deployment, and AI-based automation tools</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title selectable">Front End Developer Intern</div>
+                <div class="item-date selectable">May 2025 - Jun 2025</div>
+            </div>
+            <div class="item-subtitle selectable">Edunet Foundation (IBM SkillsBuild Program) | Remote</div>
+            <ul>
+                <li class="selectable">Built Interactive Recipe Finder platform with responsive design and intuitive user interface</li>
+                <li class="selectable">Applied modern front-end technologies including React, JavaScript, HTML/CSS, and API integration</li>
+                <li class="selectable">Developed dynamic search and filtering features for enhanced user experience</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Programming Languages</h4>
+                <div class="skill-list selectable">C++, Python, Java, JavaScript, SQL</div>
+            </div>
+            <div class="skill-category">
+                <h4>Web Technologies</h4>
+                <div class="skill-list selectable">Django, Flask, React, REST APIs, Web Stack, Bootstrap</div>
+            </div>
+            <div class="skill-category">
+                <h4>AI/ML Tools</h4>
+                <div class="skill-list selectable">Machine Learning, Scikit-learn, LIME, Pandas, Numpy, TensorFlow</div>
+            </div>
+            <div class="skill-category">
+                <h4>Cloud & DevOps</h4>
+                <div class="skill-list selectable">Google Cloud Platform, IBM Cloud, Kubernetes, Docker, CI/CD</div>
+            </div>
+            <div class="skill-category">
+                <h4>Tools & Technologies</h4>
+                <div class="skill-list selectable">Git, GitHub, Linux, Fusion 360, AutoCAD, Looker Studio</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Projects -->
+    <section class="section">
+        <h2>KEY PROJECTS</h2>
+
+        <div class="item">
+            <h3><strong>InfiGrow - College Placement Platform</strong></h3>
+            <p style="font-style: italic; color: #666; font-size: 9px;">Firebase, React, JavaScript, Firestore | ANITS College Project</p>
+            <ul>
+                <li class="selectable">Developed comprehensive Firebase-based platform to boost college placements at ANITS</li>
+                <li class="selectable">Created centralized hub for learners with resources, mentorship, and placement preparation tools</li>
+                <li class="selectable">Implemented real-time database with Firestore for seamless data management and user interactions</li>
+            </ul>
+        </div>
+        
+        <div class="item">
+            <h3><strong>Suraksha - Smart India Hackathon 2025</strong></h3>
+            <p style="font-style: italic; color: #666; font-size: 9px;">React, Node.js, AI/ML, Geolocation | SIH 2025 Submission</p>
+            <ul>
+                <li class="selectable">Developed proactive personal safety solution addressing growing concerns in urban and unfamiliar areas</li>
+                <li class="selectable">Built for SIH 2025 problem statement: "The need for a proactive rather than reactive approach to safety"</li>
+                <li class="selectable">Implemented preventive safety measures with real-time alerts and geolocation tracking</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <h3><strong>Nutrition Agent</strong></h3>
+            <p style="font-style: italic; color: #666; font-size: 9px;">IBM Watsonx, Python, AI/ML, Cloud | IBM Internship Project</p>
+            <ul>
+                <li class="selectable">Developed intelligent nutrition assistant using IBM Watsonx AI</li>
+                <li class="selectable">Implemented personalized dietary recommendations and nutritional insights</li>
+                <li class="selectable">Applied AI-based automation for health-focused user interactions</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <h3><strong>Interactive Recipe Finder</strong></h3>
+            <p style="font-style: italic; color: #666; font-size: 9px;">JavaScript, React, HTML/CSS, API | IBM Internship Project</p>
+            <ul>
+                <li class="selectable">Created dynamic recipe discovery platform with intuitive search and filtering</li>
+                <li class="selectable">Implemented responsive design for seamless cross-device experience</li>
+                <li class="selectable">Integrated recipe APIs for comprehensive recipe database access</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <h3><strong>KNN Simulator with LIME - 3rd Place Winner</strong></h3>
+            <p style="font-style: italic; color: #666; font-size: 9px;">Python, Scikit-learn, LIME, Data Science | GenAI Workshop Hackathon</p>
+            <ul>
+                <li class="selectable">Built K-Nearest Neighbors simulator for Iris dataset with explainable AI implementation</li>
+                <li class="selectable">Integrated LIME (Local Interpretable Model-agnostic Explanations) for model interpretability</li>
+                <li class="selectable">Secured 3rd place in GenAI Workshop hackathon with innovative approach to ML transparency</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section">
+        <h2>ACHIEVEMENTS & CERTIFICATIONS</h2>
+        <ul>
+            <li class="selectable"><strong>Google Arcade Legend X 2 (2025):</strong> Achieved Legend milestone in both Google Cloud Arcade Cohorts of 2025</li>
+            <li class="selectable"><strong>Smart India Hackathon:</strong> Qualified for SIH 2025 solution submission from college level</li>
+            <li class="selectable"><strong>GenAI Workshop Hackathon:</strong> 3rd Place winner with KNN Simulator and LIME implementation</li>
+            <li class="selectable"><strong>Coding Competitions:</strong> Winner in multiple college-level coding contests and hackathons</li>
+            <li class="selectable"><strong>Certifications:</strong> Harvard CS50x (Computer Science), Harvard CS50P (Python Programming), Harvard CS50W (Web Programming), GeeksForGeeks 160 Days of Problem Solving</li>
+        </ul>
+    </section>
+
+    </div> <!-- End resume-container -->
+
+    <script>
+        // Security measures
+        (function() {
+            'use strict';
+            
+            // Disable right-click
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Disable keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                if ([112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123].includes(e.keyCode)) {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                if (e.ctrlKey && e.shiftKey && ['I', 'J', 'K', 'C'].includes(e.key.toUpperCase())) {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                if (e.ctrlKey && ['u', 's', 'a', 'c', 'v', 'x'].includes(e.key.toLowerCase())) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
