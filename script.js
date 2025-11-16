@@ -1,3 +1,11 @@
+// Page Loader
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.page-loader');
+    setTimeout(() => {
+        loader.classList.add('hidden');
+    }, 2000);
+});
+
 // Navigation Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
