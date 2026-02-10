@@ -6,7 +6,7 @@
     <title>Vamsi Puttepu - Resume</title>
     
     <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data:; object-src 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; object-src 'none';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
@@ -29,8 +29,6 @@
             background: #f5f5f5;
             margin: 0;
             padding: 20px;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
         }
 
         .resume-container {
@@ -71,31 +69,57 @@
         }
         
         @media print {
-            body {
-                background: white;
+            html, body {
+                width: 210mm;
+                height: 297mm;
+                background: white !important;
                 padding: 0;
+                margin: 0;
             }
 
             .resume-container {
                 box-shadow: none;
                 padding: 0.25in;
                 max-width: 100%;
+                width: 100%;
+                margin: 0;
+                background: white !important;
             }
             
             .no-print {
                 display: none !important;
             }
 
+            h1, h2, h3, h4, p, li, div, span {
+                color: #000000 !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+
             h2 {
                 margin: 6px 0 3px 0;
+                page-break-after: avoid;
             }
 
             .section {
                 margin-bottom: 6px;
+                page-break-inside: avoid;
             }
 
             .item {
                 margin-bottom: 3px;
+                page-break-inside: avoid;
+            }
+
+            ul {
+                page-break-inside: avoid;
+            }
+
+            * {
+                -webkit-user-select: text !important;
+                -moz-user-select: text !important;
+                -ms-user-select: text !important;
+                user-select: text !important;
             }
         }
         
@@ -244,24 +268,26 @@
         .mb-2 { margin-bottom: 4px; }
         
         /* Security */
-        * {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        .selectable {
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
+        @media screen {
+            * {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            .selectable {
+                -webkit-user-select: text;
+                -moz-user-select: text;
+                -ms-user-select: text;
+                user-select: text;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Download Button -->
-    <button class="download-btn no-print" onclick="window.print()">
+    <button class="download-btn no-print" id="downloadBtn">
         📥 Download Resume
     </button>
 
@@ -277,7 +303,7 @@
             Email: vamsiv980@gmail.com | Phone: +91 6301320060
         </div>
         <div class="contact-details selectable">
-            LinkedIn: <a href="https://linkedin.com/in/vamsi-puttepu">linkedin.com/in/vamsi-puttepu</a> | GitHub: <a href="https://github.com/vamsi-op">github.com/vamsi-op</a> 
+            LinkedIn: <a href="https://linkedin.com/in/vamsi-puttepu">linkedin.com/in/vamsi-puttepu</a> | GitHub: <a href="https://github.com/vamsi-op">github.com/vamsi-op</a> | Portfolio: <a href="https://vamsiputtepu.in">vamsiputtepu.in</a>
         </div>
     </header>
 
@@ -329,14 +355,14 @@
 
         <div class="item">
             <div class="item-header">
-                <div class="item-title selectable">Front End Developer Intern</div>
-                <div class="item-date selectable">May 2025 - Jun 2025</div>
+                <div class="item-title selectable">Event Organizer - CodeClash & Rapid Fire</div>
+                <div class="item-date selectable">College Events</div>
             </div>
-            <div class="item-subtitle selectable">Edunet Foundation (IBM SkillsBuild Program) | Remote</div>
+            <div class="item-subtitle selectable">Anil Neerukonda Institute of Technology and Sciences (ANITS) | Visakhapatnam</div>
             <ul>
-                <li class="selectable">Built Interactive Recipe Finder platform with responsive design and intuitive user interface</li>
-                <li class="selectable">Applied modern front-end technologies including React, JavaScript, HTML/CSS, and API integration</li>
-                <li class="selectable">Developed dynamic search and filtering features for enhanced user experience</li>
+                <li class="selectable">Organized and conducted "CodeClash" competitive coding event, managing platform setup, challenges, and participants</li>
+                <li class="selectable">Successfully executed Rapid Fire Event testing technical knowledge, quick thinking, and confidence under time pressure</li>
+                <li class="selectable">Coordinated with technical teams and managed event logistics ensuring smooth execution and participant engagement</li>
             </ul>
         </div>
     </section>
@@ -413,6 +439,16 @@
         </div>
 
         <div class="item">
+            <h3><strong>SteelML - Material Property Predictor</strong></h3>
+            <p style="font-style: italic; color: #666; font-size: 9px;">Python, Streamlit, Scikit-learn, ML | Data Science Application</p>
+            <ul>
+                <li class="selectable">Developed machine learning application for predicting steel material properties using advanced regression models</li>
+                <li class="selectable">Built interactive Streamlit interface for real-time predictions based on material composition and processing parameters</li>
+                <li class="selectable">Implemented data visualization and model performance tracking for material science applications</li>
+            </ul>
+        </div>
+
+        <div class="item">
             <h3><strong>KNN Simulator with LIME - 3rd Place Winner</strong></h3>
             <p style="font-style: italic; color: #666; font-size: 9px;">Python, Scikit-learn, LIME, Data Science | GenAI Workshop Hackathon</p>
             <ul>
@@ -428,7 +464,7 @@
         <ul>
             <li class="selectable"><strong>Google Arcade Legend X 2 (2025):</strong> Achieved Legend milestone in both Google Cloud Arcade Cohorts of 2025</li>
             <li class="selectable"><strong>Smart India Hackathon:</strong> Qualified for SIH 2025 solution submission from college level</li>
-            <li class="selectable"><strong>LeetCode Problem Solving:</strong> Solved 500+ problems demonstrating strong algorithmic and data structure proficiency</li>
+            <li class="selectable"><strong>LeetCode Problem Solving:</strong> Solved 600+ problems demonstrating strong algorithmic and data structure proficiency</li>
             <li class="selectable"><strong>Coding Competitions:</strong> Winner in multiple college-level coding contests and hackathons</li>
             <li class="selectable"><strong>Certifications:</strong> Harvard CS50x (Computer Science), Harvard CS50P (Python Programming), Harvard CS50W (Web Programming), GeeksForGeeks 160 Days of Problem Solving</li>
         </ul>
@@ -437,6 +473,11 @@
     </div> <!-- End resume-container -->
 
     <script>
+        // Download button handler
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            window.print();
+        });
+
         // Security measures
         (function() {
             'use strict';
@@ -447,18 +488,26 @@
                 return false;
             });
             
-            // Disable keyboard shortcuts
+            // Disable keyboard shortcuts (except Ctrl+P for printing)
             document.addEventListener('keydown', function(e) {
+                // Allow Ctrl+P for printing
+                if (e.ctrlKey && e.key.toLowerCase() === 'p') {
+                    return true;
+                }
+                
+                // Block F-keys (F1-F12)
                 if ([112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123].includes(e.keyCode)) {
                     e.preventDefault();
                     return false;
                 }
                 
+                // Block Ctrl+Shift+I/J/K/C (DevTools)
                 if (e.ctrlKey && e.shiftKey && ['I', 'J', 'K', 'C'].includes(e.key.toUpperCase())) {
                     e.preventDefault();
                     return false;
                 }
                 
+                // Block Ctrl+U/S/A/C/V/X (but allow Ctrl+P)
                 if (e.ctrlKey && ['u', 's', 'a', 'c', 'v', 'x'].includes(e.key.toLowerCase())) {
                     e.preventDefault();
                     return false;
