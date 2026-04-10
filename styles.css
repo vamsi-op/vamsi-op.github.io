@@ -309,7 +309,7 @@ body {
     transform: translateY(-5px);
     box-shadow: none;
     border-color: transparent;
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
 }
 
 /* Navigation */
@@ -820,6 +820,7 @@ body {
 
 .leadership-card:hover {
     transform: translateY(-10px);
+    box-shadow: none;
 }
 
 .leadership-icon {
@@ -869,7 +870,7 @@ body {
 
 .achievement-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(79, 172, 254, 0.3);
+    box-shadow: none;
 }
 
 .achievement-card i {
@@ -913,7 +914,7 @@ body {
 
 .certification-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(79, 172, 254, 0.3);
+    box-shadow: none;
 }
 
 .cert-header {
