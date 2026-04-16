@@ -39,13 +39,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(0, 0, 0, 0.95)';
-        navbar.style.backdropFilter = 'blur(25px)';
-        navbar.style.borderBottomColor = 'rgba(79, 172, 254, 0.2)';
+        navbar.style.background = 'rgba(5, 10, 18, 0.88)';
+        navbar.style.backdropFilter = 'blur(16px)';
+        navbar.style.borderBottomColor = 'rgba(125, 186, 255, 0.35)';
     } else {
-        navbar.style.background = 'rgba(0, 0, 0, 0.8)';
-        navbar.style.backdropFilter = 'blur(25px)';
-        navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.05)';
+        navbar.style.background = 'rgba(5, 10, 18, 0.64)';
+        navbar.style.backdropFilter = 'blur(16px)';
+        navbar.style.borderBottomColor = 'rgba(125, 186, 255, 0.14)';
     }
 });
 
@@ -64,9 +64,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for scroll animations
+// Observe section titles for scroll animations
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.glass-card, .section-title');
+    const animatedElements = document.querySelectorAll('.section-title');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
